@@ -136,50 +136,109 @@ let chaussures = [
 // });
 
   // 1. Faire une boucle sur tout le tableau et de log les chaussures une par une
-    for(var i = 0; i < chaussures.length; i++){
-        console.log(chaussures[i]);
-    };
+
+  //mon code :
+    // for(var i = 0; i < chaussures.length; i++){
+    //     console.log(chaussures[i]);
+    // };
+
+    //correction :
+    chaussures.forEach((chaussure)=>{
+    console.log(chaussure)
+  })
+
 
   // 2. Log un tableau de toutes les Nikes
-  let marqueNike = chaussures.filter(function(marque){
-    return marque.marque == "Nike"
+  //le filtre crée un nouveau tableau avec l'élément en question
+
+  //mon code : 
+//   let marqueNike = chaussures.filter(function(marque){
+//     return marque.marque == "Nike"
+//   });
+//   console.log(marqueNike);
+
+//correction :
+  let nikes = chaussures.filter(({marque})=>{
+    return marque === 'Nike';
   });
-  console.log(marqueNike);
+
+  console.log(nikes);
+
+
 
   // 3. Log du prix des Vans "Old Skool"
-  let oldSkool = chaussures.filter(function(prix){
-   if(prix.marque == 'Vans'){
-    return console.log(`le prix des Vans Old Skool est de ${prix.prix}€`)
-}
-  })
+//   let oldSkool = chaussures.filter(function(prix){
+//    if(prix.marque == 'Vans'){
+//     return console.log(`le prix des Vans Old Skool est de ${prix.prix}€`)
+// }
+//   })
+
+
+chaussures.filter(({marque, titre}) => marque === 'Vans' && titre === "Old Skool").forEach(({prix}) =>{
+    console.log(prix)
+})
+
 
   // 4. Log un tableau de toutes les chaussures collector
-  let chaussureCollector = chaussures.filter(function(collector){
-    return collector.collector == true
-  })
-  console.log(chaussureCollector);
+  //mon code 
+//   let chaussureCollector = chaussures.filter(function(collector){
+//     return collector.collector == true
+//   })
+//   console.log(chaussureCollector);
+
+//correction:
+  let collectors = chaussures.filter(({collector})=> collector)
+  console.log(collectors)
+
 
   // 5. Log couleur lacets de la vans Sk8
-    let lacetsRougeSk8 = chaussures.filter(function(lacets){
-       if(lacets.marque == 'Vans' && 
-        lacets.titre == 'Sk8'
-       ){
-            return console.log(`la couleur de la vans sk8 est ${lacets.elements.lacets}`)
-       }
-  })
+
+  //mon code :
+//     let lacetsRougeSk8 = chaussures.filter(function(lacets){
+//        if(lacets.marque == 'Vans' && 
+//         lacets.titre == 'Sk8'
+//        ){
+//             return console.log(`la couleur de la vans sk8 est ${lacets.elements.lacets}`)
+//        }
+//   })
+
+//correction :
+//   let {
+//     element: {lacets},
+//   } = chaussures.find(({titre})=> titre === 'Sk8');
+//   console.log(lacets);
+
 
   // 6. Changer la couleur de la vans Sk8 en violet et log la chaussure
-  chaussures[6].elements.lacets = "violet";
-  //console.log(chaussures[6].elements.lacets);
-  console.log(chaussures[6])
+  
+  //mon code 
+//   chaussures[6].elements.lacets = "violet";
+//   //console.log(chaussures[6].elements.lacets);
+//   console.log(chaussures[6])
+
+//correction :
+// let index = chaussures.findIndex(({titre})=> titre === 'Sk8');
+//   console.log(index);
+//   chaussures[index].elements.lacets = 'violet';
+
+//   let {
+//     element: {lacets: lacets2},
+//   } = chaussures.find(({titre})=> titre === 'Sk8');
+//   console.log(lacets2);
 
 
   // 7. Plus compliqué : Log le montant total de Toutes les Nikes
-let totalNike = 0;
+// let totalNike = 0;
 
-chaussures.forEach(function (nike){
-    if(nike.marque === 'Nike'){
-        totalNike += nike.prix
-    }
-})
-console.log(`Le prix total des chaussures Nike est de : ${totalNike}€`);
+// chaussures.forEach(function (nike){
+//     if(nike.marque === 'Nike'){
+//         totalNike += nike.prix
+//     }
+// })
+// console.log(`Le prix total des chaussures Nike est de : ${totalNike}€`);
+
+//correction : 
+let total = nikes.reduce((accumulator, chaussure)=> {
+return accumulator + chaussure.prix
+}, 0);
+console.log(total);
