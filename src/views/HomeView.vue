@@ -4,6 +4,7 @@ import MyButton from '@/components/elements/MyButton.vue'
 import Layout from '@/components/layouts/DefaultLayout.vue'
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue'
 import MyIcon from '@/components/elements/MyIcon.vue'
+import SocialIcon from '@/components/elements/SocialIcons.vue'
 </script>
 
 <template>
@@ -30,6 +31,10 @@ import MyIcon from '@/components/elements/MyIcon.vue'
         
       </template>
       <MyIcon></MyIcon>
+
+      <!-- Appel d'un variant de social icon -->
+      <SocialIcon name="instagram"></SocialIcon>
+
       <MyBackgroundScroll />
       <h1>Hello World</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aperiam neque quam perferendis, quo blanditiis
