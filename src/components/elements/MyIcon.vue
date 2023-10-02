@@ -45,6 +45,5 @@ const getIcon = computed(()=> {
     height: rem(50);
     justify-content: center; 
     width: rem(50);
-    
 }
 </style>
