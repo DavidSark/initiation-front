@@ -36,3 +36,39 @@ export default {
     }
   }
   
+
+  export const SecondaryButton = {
+    render: (args) => {
+      return {
+        components: {
+          MyButton,
+        },
+        setup(){
+          return {args}
+        },
+        template: `<MyButton v-bind="args">My link Button</MyButton>`
+      }
+    },
+    args: {
+      size: "small",
+      variant: "default"
+    }
+  }
+
+  export const RoundedPrimaryButton = {
+    render: (args) => {
+      return {
+        components: {
+          MyButton,
+        },
+        setup(){
+          return {args}
+        },
+        template: `<MyButton v-bind="args">My link Button</MyButton>`
+      }
+    },
+    args: {
+      size: "regular",
+      variant: "rounded"
+    }
+  }
