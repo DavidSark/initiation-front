@@ -93,9 +93,9 @@ const className = computed(() => ({
         color: $primary-color;
     }
 
-    //taille de l'icone & des l'icone
+    //taille de l'icone & de l'icone
 
-    .icon__size{
+    svg{
         width: rem(20);
     }
     &.-small{
