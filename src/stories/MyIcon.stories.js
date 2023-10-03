@@ -7,7 +7,19 @@ export default {
     argTypes: {
     name: {
       control: 'select',
-      options: ['community', 'documentation', 'ecosystem', 'support', 'tooling']
+      options: ['community', 'documentation', 'ecosystem', 'support', 'tooling', 'left arrow', 'right arrow','right arrow2']
+    },
+    color:{
+      control: 'select',
+      options: ['black', 'white', 'orange']
+    },
+    stroke:{
+      control: 'select',
+      options: ['black', 'white', 'orange']
+    },
+    size:{
+      control: 'select',
+      options: ['small', 'regular', 'big']
     }
     }
   }
@@ -25,7 +37,9 @@ export default {
       }
     },
     args: {
-      name: 'community'
+      name: 'community',
+      color: 'white',
+      stroke: 'black'
     }
   }
   

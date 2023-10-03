@@ -9,5 +9,7 @@ import IconFork from '../icons/serviceicons/IconFork.vue'
 </template>
 
 <style lang="scss" scoped>
-
+    .icon{
+        display: inline-flex;
+    }
 </style>
