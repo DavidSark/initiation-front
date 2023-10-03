@@ -54,7 +54,7 @@ const className = computed(() => ({
 
 <template>
     <i class="icon" :class="className"  >
-        <component :is='getIcon' class="icon__size" >
+        <component :is='getIcon'  >
 
         </component>
 
@@ -101,14 +101,14 @@ const className = computed(() => ({
     &.-small{
         height: rem(30);
         width: rem(30);  
-        .icon__size{
+        svg{
         width: rem(10); 
         }
     }
     &.-big{
         height: rem(70);
         width: rem(70);  
-        .icon__size{
+        svg{
             width: rem(35);
         }
     }
