@@ -9,6 +9,16 @@ import IconTooling from '../icons/IconTooling.vue'
 import IconArrowLeft from '../icons/IconArrowLeft.vue'
 import IconArrowRight from '../icons/IconArrowRight.vue'
 import IconArrowRight2 from '../icons/IconArrowRight2.vue'
+import IconCamion from '../icons/IconCamion.vue'
+import IconClock from '../icons/IconClock.vue'
+import IconForkKnife from '../icons/IconForkKnife.vue'
+import IconForkSpoon from '../icons/IconForkSpoon.vue'
+import IconMap from '../icons/IconMap.vue'
+import IconPhone from '../icons/IconPhone.vue'
+import IconStar from '../icons/IconStar.vue'
+import IconStarStroke from '../icons/IconStarStroke.vue'
+
+
 const props = defineProps({
     name: String,
     color: String,
@@ -32,7 +42,22 @@ const getIcon = computed(() => {
             return IconArrowRight
         case 'right arrow2':
             return IconArrowRight2
-
+        case 'camion':
+            return IconCamion
+        case 'clock':
+            return IconClock
+        case 'fork knife':
+            return IconForkKnife
+        case 'fork spoon':
+            return IconForkSpoon
+        case 'map':
+            return IconMap
+        case 'phone':
+            return IconPhone
+        case 'star':
+            return IconStar
+        case 'star stroke':
+            return IconStarStroke
         default:
             return IconTooling
     }
@@ -42,6 +67,7 @@ const className = computed(() => ({
     ' -black': props.color === 'black',
     ' -white': props.color === 'white',
     ' -orange': props.color === 'orange',
+    ' -nobg': props.color === 'nobg',
 
     ' -blackStroke': props.stroke === 'black',
     ' -whiteStroke': props.stroke === 'white',
@@ -82,6 +108,10 @@ const className = computed(() => ({
         background: $primary-color;
     }
 
+    &.-nobg{
+        background: none;
+        box-shadow: none;
+    }
     //couleur de l'icone
     &.-whiteStroke{
         color: $white;

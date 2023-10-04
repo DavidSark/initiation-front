@@ -7,11 +7,11 @@ export default {
     argTypes: {
     name: {
       control: 'select',
-      options: ['community', 'documentation', 'ecosystem', 'support', 'tooling', 'left arrow', 'right arrow','right arrow2']
+      options: ['community', 'documentation', 'ecosystem', 'support', 'tooling', 'left arrow', 'right arrow','right arrow2', 'camion', 'clock', 'fork knife', 'fork spoon', 'map', 'phone', 'star', 'star stroke' ]
     },
     color:{
       control: 'select',
-      options: ['black', 'white', 'orange']
+      options: ['black', 'white', 'orange', 'nobg']
     },
     stroke:{
       control: 'select',
