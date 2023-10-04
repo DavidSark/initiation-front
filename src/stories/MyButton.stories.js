@@ -27,12 +27,12 @@ export const PrimaryButton = {
       setup(){
         return { args }
       },
-      template: `<MyButton v-bind="args">My link Button</MyButton>`
+      template: `<MyButton v-bind="args">Type something</MyButton>`
     }
   },
   args: {
     size: "regular",
-    variant: "default"
+    variant: "default",
   }
 }
 
