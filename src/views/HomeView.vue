@@ -42,7 +42,7 @@ import ServiceIcon from '../components/elements/ServiceIcon.vue'
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat aperiam neque quam perferendis, quo blanditiis
         ratione, soluta eum nobis quaerat aut modi eligendi voluptatum, in numquam tempore optio. Temporibus, minus.</p>
       <template v-slot:footer>
-        <MyButton>Bouton</MyButton>
+        <MyButton></MyButton>
       </template>
 
     </Layout>
