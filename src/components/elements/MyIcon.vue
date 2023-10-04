@@ -26,6 +26,7 @@ const props = defineProps({
     size: String
 })
 
+
 const getIcon = computed(() => {
     switch (props.name) {
         case 'community':
@@ -79,8 +80,8 @@ const className = computed(() => ({
 </script>
 
 <template>
-    <i class="icon" :class="className"  >
-        <component :is='getIcon'  >
+    <i class="icon" :class="className">
+        <component :is='getIcon'>
 
         </component>
 
@@ -108,41 +109,45 @@ const className = computed(() => ({
         background: $primary-color;
     }
 
-    &.-nobg{
+    &.-nobg {
         background: none;
         box-shadow: none;
     }
+
     //couleur de l'icone
-    &.-whiteStroke{
+    &.-whiteStroke {
         color: $white;
     }
-    &.-blackStroke{
+
+    &.-blackStroke {
         color: $black;
     }
-    &.-orangeStroke{
+
+    &.-orangeStroke {
         color: $primary-color;
     }
 
     //taille de l'icone & de l'icone
 
-    svg{
+    svg {
         width: rem(20);
     }
-    &.-small{
+
+    &.-small {
         height: rem(30);
-        width: rem(30);  
-        svg{
-        width: rem(10); 
+        width: rem(30);
+
+        svg {
+            width: rem(10);
         }
     }
-    &.-big{
+
+    &.-big {
         height: rem(70);
-        width: rem(70);  
-        svg{
+        width: rem(70);
+
+        svg {
             width: rem(35);
         }
     }
-}
-
-
-</style>
+}</style>
