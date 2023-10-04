@@ -21,7 +21,7 @@ import ServiceIcon from '../components/elements/ServiceIcon.vue'
         </nav>
       </template>
      
-        <template v-slot:aside>
+      <template v-slot:aside>
         <nav>
           <ul>
             <li><a href="#">Aside link</a></li>

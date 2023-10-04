@@ -2,11 +2,11 @@
 import {computed} from "vue"
 import MyIcon from './MyIcon.vue';
 const props = defineProps({
-        href: String,
-        size: String,
-        variant: String,
-        hasIcon: Boolean,
-    })
+  href: String,
+  size: String,
+  variant: String,
+  hasIcon: Boolean,
+})
     
 const className = computed (() => ({
   
@@ -20,15 +20,15 @@ const className = computed (() => ({
 </script>
 
 <template>
-    <a v-if="href" :href="href" :class="className"  class="button">
-        <slot></slot>
+  <a v-if="href" :href="href" :class="className"  class="button">
+    <slot></slot>
         
-        <MyIcon :class="className" class="button__hasIcon" v-if="hasIcon" name="right arrow" color="white" stroke="black" size="small" />
-    </a>
-    <button :content="content" v-else class="button" :class="className" >
-   <slot></slot>
-        <MyIcon v-if="hasIcon" :class="className" class="button__hasIcon"  name="right arrow" color="white" stroke="black" size="small" />
-    </button>
+    <MyIcon :class="className" class="button__hasIcon" v-if="hasIcon" name="right arrow" color="white" stroke="black" size="small" />
+  </a>
+  <button :content="content" v-else class="button" :class="className" >
+    <slot></slot>
+    <MyIcon v-if="hasIcon" :class="className" class="button__hasIcon"  name="right arrow" color="white" stroke="black" size="small" />
+  </button>
 </template>
 
 <style lang="scss" scoped>

@@ -20,73 +20,73 @@ import IconStarStroke from '../icons/IconStarStroke.vue'
 
 
 const props = defineProps({
-    name: String,
-    color: String,
-    stroke: String,
-    size: String
+  name: String,
+  color: String,
+  stroke: String,
+  size: String
 })
 
 
 const getIcon = computed(() => {
-    switch (props.name) {
-        case 'community':
-            return IconCommunity
-        case 'documentation':
-            return IconDocumentation
-        case 'ecosystem':
-            return IconEcosystem
-        case 'support':
-            return IconSupport
-        case 'left arrow':
-            return IconArrowLeft
-        case 'right arrow':
-            return IconArrowRight
-        case 'right arrow2':
-            return IconArrowRight2
-        case 'camion':
-            return IconCamion
-        case 'clock':
-            return IconClock
-        case 'fork knife':
-            return IconForkKnife
-        case 'fork spoon':
-            return IconForkSpoon
-        case 'map':
-            return IconMap
-        case 'phone':
-            return IconPhone
-        case 'star':
-            return IconStar
-        case 'star stroke':
-            return IconStarStroke
-        default:
-            return IconTooling
-    }
+  switch (props.name) {
+  case 'community':
+    return IconCommunity
+  case 'documentation':
+    return IconDocumentation
+  case 'ecosystem':
+    return IconEcosystem
+  case 'support':
+    return IconSupport
+  case 'left arrow':
+    return IconArrowLeft
+  case 'right arrow':
+    return IconArrowRight
+  case 'right arrow2':
+    return IconArrowRight2
+  case 'camion':
+    return IconCamion
+  case 'clock':
+    return IconClock
+  case 'fork knife':
+    return IconForkKnife
+  case 'fork spoon':
+    return IconForkSpoon
+  case 'map':
+    return IconMap
+  case 'phone':
+    return IconPhone
+  case 'star':
+    return IconStar
+  case 'star stroke':
+    return IconStarStroke
+  default:
+    return IconTooling
+  }
 })
 
 const className = computed(() => ({
-    ' -black': props.color === 'black',
-    ' -white': props.color === 'white',
-    ' -orange': props.color === 'orange',
-    ' -nobg': props.color === 'nobg',
+  ' -black': props.color === 'black',
+  ' -white': props.color === 'white',
+  ' -orange': props.color === 'orange',
+  ' -nobg': props.color === 'nobg',
 
-    ' -blackStroke': props.stroke === 'black',
-    ' -whiteStroke': props.stroke === 'white',
-    ' -orangeStroke': props.stroke === 'orange',
+  ' -blackStroke': props.stroke === 'black',
+  ' -whiteStroke': props.stroke === 'white',
+  ' -orangeStroke': props.stroke === 'orange',
 
-    ' -small': props.size === 'small',
-    ' -big': props.size === 'big'
+  ' -small': props.size === 'small',
+  ' -big': props.size === 'big'
 }))
 </script>
 
 <template>
-    <i class="icon" :class="className">
-        <component :is='getIcon'>
+  <i class="icon" :class="className">
+    <component :is='getIcon'>
 
-        </component>
+    </component>
 
 
-    </i>
+  </i>
 </template>
 
 <style lang="scss" scoped>
