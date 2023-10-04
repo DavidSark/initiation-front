@@ -1,10 +1,10 @@
 <script setup>
 
 const props = defineProps({
-    content: String,
-    href: String,
-    size: String,
-    variant: String
+  content: String,
+  href: String,
+  size: String,
+  variant: String
 })
 
 const className = `button${props.variant === "rounded" ? " -rounded" : ""}${props.size === "small" ? " -small" : ""}`
@@ -12,10 +12,10 @@ const className = `button${props.variant === "rounded" ? " -rounded" : ""}${prop
 </script>
 
 <template>
-    <a v-if="href" :href="href" :class="className"><slot></slot></a>
-    <button v-else :class="className">
-     <slot></slot>
-    </button>
+  <a v-if="href" :href="href" :class="className"><slot></slot></a>
+  <button v-else :class="className">
+    <slot></slot>
+  </button>
 </template>
 
 <style lang="scss" scoped>

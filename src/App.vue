@@ -6,10 +6,10 @@ import { RouterView } from 'vue-router'
 <template>
   <header>
   
-      <nav>
+    <nav>
         
      
-      </nav>
+    </nav>
 
   </header>
 

@@ -1,8 +1,8 @@
 <script setup>
-  import MyCard from './MyCard.vue'
-  import { reactive } from 'vue'
+import MyCard from './MyCard.vue'
+import { reactive } from 'vue'
  
-  const response = [
+const response = [
   {
     description: 'Description de la card',
     title: "100% Gratuit",
@@ -45,9 +45,9 @@
     imageAlt : 'Image de chat',
     buttonLabel: "Bouton de la card"
   }
-  ]
+]
 
-  const cards = reactive(response)
+const cards = reactive(response)
 </script>
 
 <template>

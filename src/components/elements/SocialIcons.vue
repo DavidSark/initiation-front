@@ -6,29 +6,29 @@ import IconLinkedin from '@/components/icons/socialicons/IconLinkedin.vue'
 import IconInstagram from '@/components/icons/socialicons/IconInstagram.vue'
 
 const props = defineProps({
-    name: String, 
+  name: String, 
 })
 
 const getSocial = computed(()=> {
-    switch (props.name){
-        case 'twitter':
-            return IconTwitter
-        case 'linkedin':
-            return IconLinkedin
-        case 'instagram':
-            return IconInstagram
-        default:
-            return IconFacebook
-    }
+  switch (props.name){
+  case 'twitter':
+    return IconTwitter
+  case 'linkedin':
+    return IconLinkedin
+  case 'instagram':
+    return IconInstagram
+  default:
+    return IconFacebook
+  }
 })
 
 
 </script>
 
 <template>
-<i class="icon">
-<component :is="getSocial"></component>
-</i>
+  <i class="icon">
+    <component :is="getSocial"></component>
+  </i>
 
 </template>
 
