@@ -1,11 +1,15 @@
 <script setup>
 import MyButton from './elements/MyButton.vue';
+import MyIcon from './elements/MyIcon.vue';
+
 defineProps({
   imageAlt: String,
   imageSrc: String,
   title : String,
   description: String,
   buttonLabel: String,
+  price: String,
+  note: String
 })
 </script>
 <template>
@@ -15,29 +19,60 @@ defineProps({
     </div>
 
     <div class="card__content">
-      <h2 size='small'>{{ title }}</h2>
-      <p>{{ description }}</p>
-      <div class='card__button'>
-        <MyButton variant='rounded' size='small'>{{ buttonLabel }}</MyButton>
+      <div class="card__content-flex">
+        <h2 size='small'>{{ title }}</h2>
+        <div class="card__content-flex-note">
+          <MyIcon name="star" color="nobg" stroke="orange"></MyIcon>
+          <p>{{ note }}</p>
+        </div>
       </div>
+      <div class='card__button'>
+        <MyButton variant='rounded' size='small'>Add to Cart</MyButton>
+        <p>${{ price }}</p>
+      </div>
+      
     </div>
   
   </div>
 </template>
 <style lang='scss' scoped>
 .card{
- max-width: rem(300);
+  min-width: rem(284);
+ max-width: rem(485);
  border-radius: rem(20);
- border: rem(1) solid $gray;
  overflow: hidden;
+ box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.10);
+ &__image img{ 
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+ }
  &__content{
   padding: rem(20) rem(10);
   > * + * {
     margin-top: rem(20);
   }
+  &-flex{
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    &-note{
+      display: flex;
+      align-items: center;
+      p{
+        font-size: $small-font-size;
+      }
+    }
+}
+ 
  }
  &__button{
-  text-align: center;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
  }
+ 
 }
 </style>

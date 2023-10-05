@@ -18,6 +18,12 @@ export default {
     },
     buttonLabel: {
       control: 'text'
+    },
+    price: {
+      control: 'number'
+    },
+    note:{
+      control: 'number'
     }
   }
 }
@@ -37,8 +43,10 @@ export const Card = {
   args: {
     description: 'Description de la card',
     title: "Titre de la card",
-    imageSrc : 'http://placekitten.com/300/150',
+    imageSrc : 'src/assets/sandwich.jpg',
     imageAlt : 'Image de chat',
-    buttonLabel: "Bouton de la card"
+    buttonLabel: "Bouton de la card",
+    price: '45',
+    note: '3.9'
   }
 }
