@@ -44,7 +44,7 @@ const className = computed (() => ({
         border-radius: 0.9375rem;
         background: linear-gradient(180deg, #EFAB68 0%, #F48E28 100%);
         font-weight: 600;
-        box-shadow: 0px rem(4) rem(4) rgba(0,0,0,0.25);
+        // box-shadow: 0px rem(4) rem(4) rgba(0,0,0,0.25);
         font-size: $regular-font-size;
         font-family: $primary-font;
         display: inline-block;

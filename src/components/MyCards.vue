@@ -6,44 +6,56 @@ const response = [
   {
     description: 'Description de la card',
     title: "100% Gratuit",
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel: "Bouton de la card"
+    imageSrc : 'src/assets/sandwich.jpg',
+    imageAlt : 'image de sandwich',
+    buttonLabel: "Bouton de la card",
+    price: '15.00',
+    note: 4.9
   }, 
   {
     description: 'Description de la card',
     title: "100% ecolo",
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel: "Bouton de la card"
+    imageSrc : 'src/assets/enchiladas.jpg',
+    imageAlt : "Image d'enchiladas",
+    buttonLabel: "Bouton de la card",
+    price: '25.00',
+    note: '5.0'
   },
   {
     description: 'Description de la card',
     title: "Retours gratuits",
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel: "Bouton de la card"
+    imageSrc : 'src/assets/greenbeans.jpg',
+    imageAlt : "Image d'haricots verts",
+    buttonLabel: "Bouton de la card",
+    price: '12.00',
+    note: '5.9'
   },
   {
     description: 'Description de la card',
     title: "Retours gratuits",
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel: "Bouton de la card"
+    imageSrc : 'src/assets/pizza-pepperoni.jpg',
+    imageAlt : 'Image de pizza pepperoni',
+    buttonLabel: "Bouton de la card",
+    price: '18.50',
+    note: '5.0'
   },
   {
     description: 'Description de la card',
     title: "Retours gratuits",
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel: "Bouton de la card"
+    imageSrc : 'src/assets/chicken-pot-pie.png',
+    imageAlt : 'Image de tarte au poulet',
+    buttonLabel: "Bouton de la card",
+    price: '25.00',
+    note: '4.9'
   },
   {
     description: 'Description de la card',
     title: "Retours gratuits",
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel: "Bouton de la card"
+    imageSrc : 'src/assets/green-salad.jpg',
+    imageAlt : 'Image de salade verte',
+    buttonLabel: "Bouton de la card",
+    price: '15.00',
+    note: '5.0'
   }
 ]
 
