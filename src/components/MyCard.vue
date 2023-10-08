@@ -37,7 +37,7 @@ defineProps({
 </template>
 <style lang='scss' scoped>
 .card{
-  min-width: rem(284);
+ min-width: rem(284);
  max-width: rem(485);
  border-radius: rem(20);
  overflow: hidden;

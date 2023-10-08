@@ -1,5 +1,7 @@
-<script setup>
-import IconFork from '../icons/serviceicons/IconFork.vue'
+<template></template>
+
+<!-- <script setup>
+import IconForkKnife from '../icons/IconForkKnife.vue';
 </script>
 
 <template>
@@ -12,4 +14,4 @@ import IconFork from '../icons/serviceicons/IconFork.vue'
     .icon{
         display: inline-flex;
     }
-</style>
+</style> -->

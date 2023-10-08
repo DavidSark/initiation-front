@@ -9,10 +9,10 @@ import IconTooling from '../icons/IconTooling.vue'
 import IconArrowLeft from '../icons/IconArrowLeft.vue'
 import IconArrowRight from '../icons/IconArrowRight.vue'
 import IconArrowRight2 from '../icons/IconArrowRight2.vue'
-import IconCamion from '../icons/IconCamion.vue'
 import IconClock from '../icons/IconClock.vue'
 import IconForkKnife from '../icons/IconForkKnife.vue'
 import IconForkSpoon from '../icons/IconForkSpoon.vue'
+import IconDelivery from '../icons/IconDelivery.vue'
 import IconMap from '../icons/IconMap.vue'
 import IconPhone from '../icons/IconPhone.vue'
 import IconStar from '../icons/IconStar.vue'
@@ -43,8 +43,8 @@ const getIcon = computed(() => {
     return IconArrowRight
   case 'right arrow2':
     return IconArrowRight2
-  case 'camion':
-    return IconCamion
+  case 'delivery':
+    return IconDelivery
   case 'clock':
     return IconClock
   case 'fork knife':
@@ -69,10 +69,12 @@ const className = computed(() => ({
   ' -white': props.color === 'white',
   ' -orange': props.color === 'orange',
   ' -nobg': props.color === 'nobg',
+  ' -orangelight': props.color === 'light orange',
 
   ' -blackStroke': props.stroke === 'black',
   ' -whiteStroke': props.stroke === 'white',
   ' -orangeStroke': props.stroke === 'orange',
+  
 
   ' -small': props.size === 'small',
   ' -big': props.size === 'big'
@@ -107,6 +109,10 @@ const className = computed(() => ({
 
     &.-orange {
         background: $primary-color;
+    }
+
+    &.-orangelight {
+        background: $secondary-color;
     }
 
     &.-nobg {
@@ -150,4 +156,5 @@ const className = computed(() => ({
             width: rem(35);
         }
     }
-}</style>
+}
+</style>
