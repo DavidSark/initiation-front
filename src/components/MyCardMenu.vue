@@ -50,12 +50,13 @@ defineProps({
   height: rem(275);
   position: relative;
   border: 1px solid black;
-  &__image{
+  &__image img{
     position: absolute;
     width: rem(350);
     top: rem(40);
-    left: rem(130);
-    transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+
   }
   &__content{
     &-flex{
