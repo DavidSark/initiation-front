@@ -25,7 +25,7 @@ const className = computed (() => ({
         
     <MyIcon :class="className" class="button__hasIcon" v-if="hasIcon" name="right arrow" color="white" stroke="black" size="small" />
   </a>
-  <button :content="content" v-else class="button" :class="className" >
+  <button v-else class="button" :class="className" >
     <slot></slot>
     <MyIcon v-if="hasIcon" :class="className" class="button__hasIcon"  name="right arrow" color="white" stroke="black" size="small" />
   </button>

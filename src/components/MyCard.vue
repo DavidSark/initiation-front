@@ -2,6 +2,7 @@
 import MyButton from './elements/MyButton.vue';
 import MyIcon from './elements/MyIcon.vue';
 
+
 defineProps({
   imageAlt: String,
   imageSrc: String,
@@ -20,7 +21,7 @@ defineProps({
 
     <div class="card__content">
       <div class="card__content-flex">
-        <h2 size='small'>{{ title }}</h2>
+        <h2 size='small' >{{ title }}</h2>
         <div class="card__content-flex-note">
           <MyIcon name="star" color="nobg" stroke="orange"></MyIcon>
           <p>{{ note }}</p>

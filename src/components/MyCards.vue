@@ -63,7 +63,7 @@ const cards = reactive(response)
 </script>
 
 <template>
-  <div class='cards'>
+  <div class='cards' >
     <MyCard v-for='card in cards' v-bind='card' :key="card.title" /> 
   </div>
 </template>

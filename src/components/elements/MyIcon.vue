@@ -17,6 +17,8 @@ import IconMap from '../icons/IconMap.vue'
 import IconPhone from '../icons/IconPhone.vue'
 import IconStar from '../icons/IconStar.vue'
 import IconStarStroke from '../icons/IconStarStroke.vue'
+import IconSearch from '../icons/IconSearch.vue'
+import IconCart from '../icons/IconCart.vue'
 
 
 const props = defineProps({
@@ -59,6 +61,10 @@ const getIcon = computed(() => {
     return IconStar
   case 'star stroke':
     return IconStarStroke
+  case 'search':
+    return IconSearch
+  case 'cart':
+    return IconCart
   default:
     return IconTooling
   }

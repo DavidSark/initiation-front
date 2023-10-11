@@ -1,76 +1,65 @@
 <script setup>
-import {onMounted} from 'vue'
 import MyButton from '@/components/elements/MyButton.vue'
-// import MyButtonVue3 from '@/components/elements/MyButton2.vue'
-import MyIcon from '@/components/elements/MyIcon.vue'
-import SocialIcon from '@/components/elements/SocialIcons.vue'
-import ServiceIcon from '../components/elements/ServiceIcon.vue'
-import MyDesc from '../components/elements/MyDesc.vue'
-import MyCard from '../components/MyCards.vue'
-import MyCardsService from '../components/MyCardsService.vue'
+import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
+import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue'
+import { onMounted, ref} from "vue"
+import axios from 'axios'
+import MyCard from '../components/MyCard.vue'
 
+// Client axios global
+const client = axios.create({
+  baseURL: import.meta.env.VITE_API_URL
+})
 
-// Première façon d'écrire le fetch
-// fetch('http://localhost:3000/recipes',{
-//   method: 'GET'
-// }).then((response) => {
-//   return response.json()
-// }).then((data) => {
-//   console.log(data)
-// })
+const recipes = ref([])
 
-//Autre facon de fetch :
-// console.log('avant la requête 1');
-// fetch('http://localhost:3000/recipes').then(response => response.json()
-// ).then((data) => {
-//   console.log('liste des recettes',data)
-// });
-// console.log('après la requête 1')
-
-// onMounted(async() => {
-//   console.log('avant la requête 2');
-//   const response = await fetch('http://localhost:3000/recipes')
-//   const data = await response.json()
-//   console.log('liste des recettes', data)
-//   console.log('après la requête 2')
-// })
-
-
-// const getArticlesThen = () =>{
-//   fetch('http://localhost:3000/recipes')
-//   .then(response => response.json())
-//   .then(data => console.log('fetch + then', data))
-// }
-
-// const getArticles = async () =>{
-//   const response = await fetch('http://localhost:3000/recipes')
-//   return response.json()
-// }
-
-const getRecipiesThen = () =>{
-  fetch('http://localhost:3000/recipes')
-  .then(response => response.json())
-  .then(data => console.log('fetch + then', data))
+const getRecipes = async () => {
+  const response = await client.get('/recipes')
+  return response.data
 }
-
-const getRecipies = async () =>{
-  const response = await fetch('http://localhost:3000/recipes')
-  return response.json()
-}
-
 
 onMounted(async () => {
-  console.log('fect + await', await getRecipies())
-  getRecipiesThen()
+  recipes.value = await getRecipes()
 })
+
+console.log('loser',recipes.value)
 </script>
 
 <template>
-  <main>
-  
-    <MyCard></MyCard>
-    <MyDesc color="light gray"></MyDesc>
-    <MyCardsService></MyCardsService>
+  <DefaultLayout>
+    <template #header>
+      <nav>
+        <ul>
+          <!-- <li v-for="(recipe, index) in recipes" :key="index"><a href="#">{{ recipe.recipe_name }}</a></li> -->
+        </ul>
+      </nav>
+    </template>
 
-  </main>
+    <template #aside>
+      <img style='max-width: 100px;' src='@/assets/pizza-png.png' />
+      <nav>
+        <ul>
+          <li><a href="#">Aside link 1</a></li>
+          <li><a href="#">Aside link 2</a></li>
+          <li><a href="#">Aside link 3</a></li>
+        </ul>
+      </nav>
+    </template>
+    <div >
+      <MyCard v-for="(item, index) in recipes" :key="index"
+      :title="item.recipe_name"
+      :description="item_description"
+      :imgSrc="item.image_url"></MyCard>
+    </div>
+    <MyBackgroundScroll />
+
+    <template #footer>
+      <MyButton href="/about" variant="rounded">My link Button</MyButton>
+    </template>
+  </DefaultLayout>
+
+  <!-- <MyButton size="small" href="/about">My Small Button</MyButton>
+  <MyButton href="/about">My link Button</MyButton>
+  <MyButton variant="rounded" >My rounded Button</MyButton> -->
+  <p></p>
 </template>
