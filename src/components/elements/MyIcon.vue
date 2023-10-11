@@ -155,8 +155,8 @@ const className = computed(() => ({
     }
 
     &.-big {
-        height: rem(70);
-        width: rem(70);
+        height: rem(58);
+        width: rem(58);
 
         svg {
             width: rem(35);

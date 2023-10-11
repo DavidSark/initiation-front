@@ -27,7 +27,7 @@ export const PrimaryButton = {
       setup(){
         return { args }
       },
-      template: `<MyButton v-bind="args">Type something</MyButton>`
+      template: `<MyButton v-bind="args">See more product</MyButton>`
     }
   },
   args: {

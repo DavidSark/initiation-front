@@ -23,11 +23,11 @@ const className = computed (() => ({
   <a v-if="href" :href="href" :class="className"  class="button">
     <slot></slot>
         
-    <MyIcon :class="className" class="button__hasIcon" v-if="hasIcon" name="right arrow" color="white" stroke="black" size="small" />
+    <MyIcon :class="className" class="button__hasIcon" v-if="hasIcon" name="right arrow" color="white" stroke="orange" size="big" />
   </a>
   <button v-else class="button" :class="className" >
     <slot></slot>
-    <MyIcon v-if="hasIcon" :class="className" class="button__hasIcon"  name="right arrow" color="white" stroke="black" size="small" />
+    <MyIcon v-if="hasIcon" :class="className" class="button__hasIcon"  name="right arrow" color="white" stroke="orange" size="big" />
   </button>
 </template>
 
@@ -64,12 +64,19 @@ const className = computed (() => ({
         }
 
         &.-hasIcon{
-            > * {
-                padding:rem(0) rem(0);
-                width: rem(58);
-                height: rem(58);
-                margin-left: rem(15);
-            }
+          display: flex;
+          align-items: center;
+          padding:rem(8) rem(11);
+          justify-content: center;
+          gap: rem(27);
+          border-radius: rem(37);
+           
+            // > * {
+            //     padding:rem(0) rem(0);
+            //     width: rem(58);
+            //     height: rem(58);
+            //     margin-left: rem(15);
+            // }
         }
     }
     
