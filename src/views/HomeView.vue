@@ -3,13 +3,10 @@ import MyButton from '@/components/elements/MyButton.vue'
 import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue'
 import { onMounted, ref} from "vue"
-import axios from 'axios'
+import {client} from '../utils/axios'
 import MyCard from '../components/MyCard.vue'
 
-// Client axios global
-const client = axios.create({
-  baseURL: import.meta.env.VITE_API_URL
-})
+
 
 const recipes = ref([])
 
@@ -47,9 +44,12 @@ console.log('loser',recipes.value)
     </template>
     <div >
       <MyCard v-for="(item, index) in recipes" :key="index"
+      :id="item.recipe_id"
       :title="item.recipe_name"
       :description="item_description"
-      :imgSrc="item.image_url"></MyCard>
+      :imgSrc="item.image_url">
+    </MyCard>
+      
     </div>
     <MyBackgroundScroll />
 

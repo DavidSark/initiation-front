@@ -4,6 +4,7 @@ import MyIcon from './elements/MyIcon.vue';
 
 
 defineProps({
+  id: Number,
   imageAlt: String,
   imageSrc: String,
   title : String,
@@ -30,6 +31,7 @@ defineProps({
       <div class='card__button'>
         <MyButton variant='rounded' size='small'>Add to Cart</MyButton>
         <p>${{ price }}</p>
+        <RouterLink :to="`/recipes/${id}`">Plus d'info</RouterLink>
       </div>
       
     </div>

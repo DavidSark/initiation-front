@@ -65,6 +65,9 @@ const className = computed (() => ({
 
         &.-hasIcon{
             > * {
+                padding:rem(0) rem(0);
+                width: rem(58);
+                height: rem(58);
                 margin-left: rem(15);
             }
         }
