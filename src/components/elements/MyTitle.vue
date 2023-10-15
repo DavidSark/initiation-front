@@ -11,6 +11,7 @@ const props = defineProps(({
 
 const className = computed (()=>({
   ' -big': props.size === 'big',
+  ' -medium': props.size === 'medium',
   ' -small': props.size === 'small',
 
   ' -h1': props.el === 'h1',
@@ -19,6 +20,7 @@ const className = computed (()=>({
   ' -h4': props.el === 'h4',
 
   ' -orange': props.color === 'orange',
+  ' -white': props.color === 'white',
 
   ' -bold': props.bold === 'bold'
 }))
@@ -43,12 +45,19 @@ const className = computed (()=>({
     font-size: $medium-font-size;
 
   }
+  &.-medium{
+    font-size: $big-font-size;
+
+  }
   &.-big{
     font-size: $giant-font-size;
   }
 
   &.-orange{
     color: $primary-color;
+  }
+  &.-white{
+    color: $white;
   }
   &.-bold{
     font-weight: 700;

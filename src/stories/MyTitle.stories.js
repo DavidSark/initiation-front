@@ -10,11 +10,11 @@ export default {
     },
     size : {
       control : "select",
-      options : ['default', 'small', 'big']
+      options : ['default', 'small', 'medium' ,'big']
     },
     color:{
       control: "select",
-      options: ['default', 'orange']
+      options: ['default', 'orange', 'white']
     },
     bold:{
       control: 'select',

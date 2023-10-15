@@ -30,10 +30,16 @@ import MyIcon from './elements/MyIcon.vue';
 
 <style lang="scss" scoped>
 .menu{
-display: flex;
-align-items: center;
-justify-content: space-between;
-
+    background-color: $white;
+    padding: 15px rem(110) rem(15) rem(110);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-top: rem(15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
     &__image{
         flex-shrink: 0; 
         margin-right: 20px; 
@@ -43,10 +49,11 @@ justify-content: space-between;
         display: flex;
         align-items: center;
         justify-content: end;
-        width: 50%;
-        gap: 40px;
+        gap: 50px;
+        padding-right: 5%;
         flex-shrink: 0;
-        flex:1
+        flex:1;
+       
     }
 
     &__search{
@@ -54,13 +61,13 @@ justify-content: space-between;
         background: $white;
         box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.15);
         display: flex;
-      
         align-items: center;
         height: rem(65);
         margin-left: 60px;
 
         &-cart{
             position: relative;
+            margin-right: rem(20);
             &-count{
             width: rem(15);
             height: rem(15);
@@ -74,6 +81,7 @@ justify-content: space-between;
             font-size: $small-font-size;
             text-align: center;
             color: $white;
+          
         }
         }
 
@@ -95,7 +103,7 @@ justify-content: space-between;
         }
 
         &-separate{
-            margin-left: rem(30);
+            margin-right: rem(15);
             border: 1px solid $black;
             widows: rem(1);
             height: rem(37);

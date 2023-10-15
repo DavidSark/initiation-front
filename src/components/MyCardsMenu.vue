@@ -47,7 +47,8 @@ const cardsMenu = reactive(response)
 
 .cardsMenu{
   display: grid;
-  gap: rem(50);
+  gap: rem(15);
   grid-template-columns: repeat(2, 260px);
 }
+
 </style>

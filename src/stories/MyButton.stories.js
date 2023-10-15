@@ -14,6 +14,10 @@ export default {
     variant: {
       control: "select",
       options: ['default', 'rounded']
+    },
+    sizeText:{
+      control: "select",
+      options: ['default', 'medium']
     }
   }
 }
@@ -27,7 +31,7 @@ export const PrimaryButton = {
       setup(){
         return { args }
       },
-      template: `<MyButton v-bind="args">See more product</MyButton>`
+      template: `<MyButton v-bind="args">See more Product</MyButton>`
     }
   },
   args: {

@@ -19,6 +19,7 @@ import IconStar from '../icons/IconStar.vue'
 import IconStarStroke from '../icons/IconStarStroke.vue'
 import IconSearch from '../icons/IconSearch.vue'
 import IconCart from '../icons/IconCart.vue'
+import IconPlay from '../icons/IconPlay.vue'
 
 
 const props = defineProps({
@@ -65,6 +66,8 @@ const getIcon = computed(() => {
     return IconSearch
   case 'cart':
     return IconCart
+  case 'play':
+    return IconPlay
   default:
     return IconTooling
   }
@@ -83,7 +86,8 @@ const className = computed(() => ({
   
 
   ' -small': props.size === 'small',
-  ' -big': props.size === 'big'
+  ' -big': props.size === 'big',
+  ' -verybig': props.size === 'very big'
 }))
 </script>
 
@@ -160,6 +164,17 @@ const className = computed(() => ({
 
         svg {
             width: rem(35);
+
+        }
+    }
+
+    &.-verybig {
+        height: rem(88);
+        width: rem(88);
+
+        svg {
+            width: rem(35);
+
         }
     }
 }

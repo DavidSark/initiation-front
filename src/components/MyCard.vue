@@ -31,7 +31,7 @@ defineProps({
       <div class='card__button'>
         <MyButton variant='rounded' size='small'>Add to Cart</MyButton>
         <p>${{ price }}</p>
-        <RouterLink :to="`/recipes/${id}`">Plus d'info</RouterLink>
+        <!-- <RouterLink :to="`/recipes/${id}`">Plus d'info</RouterLink> -->
       </div>
       
     </div>
@@ -40,8 +40,6 @@ defineProps({
 </template>
 <style lang='scss' scoped>
 .card{
- min-width: rem(284);
- max-width: rem(485);
  border-radius: rem(20);
  overflow: hidden;
  box-shadow: 0px 2px 30px 0px rgba(0, 0, 0, 0.10);
@@ -51,10 +49,8 @@ defineProps({
     width: 100%;
  }
  &__content{
-  padding: rem(20) rem(10);
-  > * + * {
-    margin-top: rem(20);
-  }
+  padding: rem(0) rem(10) rem(40) rem(10);
+ 
   &-flex{
   padding: 0 10px;
   display: flex;
@@ -67,7 +63,7 @@ defineProps({
         font-size: $small-font-size;
       }
     }
-}
+  }
  
  }
  &__button{
@@ -76,6 +72,5 @@ defineProps({
   align-items: center;
   justify-content: space-between;
  }
- 
 }
 </style>

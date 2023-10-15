@@ -1,11 +1,17 @@
 <script setup>
-import MyButton from '@/components/elements/MyButton.vue'
+import MyHeader from '../components/MyHeader.vue'
+import MyHero from '../components/layouts/MyHero.vue'
+import MyLocationCards from '../components/LocationCards.vue'
+import MyCards from '../components/MyCards.vue'
+import MyCardsService from '../components/MyCardsService.vue'
+import CommentarySection from '../components/CommentaryCard.vue'
+import NewsletterSection from '../components/layouts/NewsletterSection.vue'
+
 import DefaultLayout from '@/components/layouts/DefaultLayout.vue'
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue'
 import { onMounted, ref} from "vue"
 import {client} from '../utils/axios'
 import MyCard from '../components/MyCard.vue'
-
 
 
 const recipes = ref([])
@@ -23,43 +29,42 @@ console.log('loser',recipes.value)
 </script>
 
 <template>
-  <DefaultLayout>
-    <template #header>
-      <nav>
-        <ul>
-          <!-- <li v-for="(recipe, index) in recipes" :key="index"><a href="#">{{ recipe.recipe_name }}</a></li> -->
-        </ul>
-      </nav>
-    </template>
+    <div class="main">
+      <MyHero/>
+      <MyLocationCards/>
+      <MyCards/>
+      <MyCardsService/>
+      <CommentarySection/>
+      <NewsletterSection/>
+   
+    
+ 
 
-    <template #aside>
-      <img style='max-width: 100px;' src='@/assets/pizza-png.png' />
-      <nav>
-        <ul>
-          <li><a href="#">Aside link 1</a></li>
-          <li><a href="#">Aside link 2</a></li>
-          <li><a href="#">Aside link 3</a></li>
-        </ul>
-      </nav>
-    </template>
-    <div >
-      <MyCard v-for="(item, index) in recipes" :key="index"
-      :id="item.recipe_id"
-      :title="item.recipe_name"
-      :description="item_description"
-      :imgSrc="item.image_url">
-    </MyCard>
-      
-    </div>
-    <MyBackgroundScroll />
 
-    <template #footer>
-      <MyButton href="/about" variant="rounded">My link Button</MyButton>
-    </template>
-  </DefaultLayout>
+
+
+
+
+
+
+
+
+
+
+
+ 
 
   <!-- <MyButton size="small" href="/about">My Small Button</MyButton>
   <MyButton href="/about">My link Button</MyButton>
   <MyButton variant="rounded" >My rounded Button</MyButton> -->
-  <p></p>
+  
+</div>
 </template>
+
+
+<style lang="scss" scoped>
+.main {
+  margin: 0 rem(110) 0 rem(110) ;
+  
+}
+</style>

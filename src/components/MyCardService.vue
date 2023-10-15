@@ -159,7 +159,8 @@ const className = computed(() => ({
   flex-direction: column;
   align-items: center;
   gap:rem(42);
-
+  transition: all .5s;
+ 
   border-radius: rem(35);
   border: 1px solid $gray;
   background: $white;

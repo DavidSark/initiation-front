@@ -7,7 +7,7 @@ export default {
   argTypes: {
     name: {
       control: 'select',
-      options: ['community', 'documentation', 'ecosystem', 'support', 'tooling', 'left arrow', 'right arrow','right arrow2', 'delivery', 'clock', 'fork knife', 'fork spoon', 'map', 'phone', 'star', 'star stroke', 'search', 'cart' ]
+      options: ['community', 'documentation', 'ecosystem', 'support', 'tooling', 'left arrow', 'right arrow','right arrow2', 'delivery', 'clock', 'fork knife', 'fork spoon', 'map', 'phone', 'star', 'star stroke', 'search', 'cart', 'play' ]
     },
     color:{
       control: 'select',
@@ -19,7 +19,7 @@ export default {
     },
     size:{
       control: 'select',
-      options: ['small', 'regular', 'big']
+      options: ['small', 'regular', 'big', 'very big']
     }
   }
 }

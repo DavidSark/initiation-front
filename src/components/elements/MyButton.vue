@@ -6,6 +6,7 @@ const props = defineProps({
   size: String,
   variant: String,
   hasIcon: Boolean,
+  sizeText: String
 })
     
 const className = computed (() => ({
@@ -13,6 +14,7 @@ const className = computed (() => ({
   ' -rounded': props.variant === 'rounded',
   ' -small': props.size === 'small',
   ' -hasIcon': props.hasIcon,
+  ' -sizeText': props.sizeText === 'medium'
 }))
 
 
@@ -35,9 +37,12 @@ const className = computed (() => ({
 
     .button {
         border: none;
+        // width: rem(248);
+        // height: rem(86);
+        //white-space: nowrap;
         color: $white;
         display: inline-flex;
-        padding:rem(33) rem(67);
+        padding:rem(28) rem(50);
         justify-content: center;
         align-items: center;
         gap: 0.625rem;
@@ -45,19 +50,20 @@ const className = computed (() => ({
         background: linear-gradient(180deg, #EFAB68 0%, #F48E28 100%);
         font-weight: 600;
         // box-shadow: 0px rem(4) rem(4) rgba(0,0,0,0.25);
-        font-size: $regular-font-size;
+        font-size: $medium-font-size;
         font-family: $primary-font;
         display: inline-block;
         text-decoration: none;
         
         &.-rounded{
             background: $primary-color;
-            padding: rem(26) rem(64);
+            // padding: rem(26) rem(64);
             border-radius: rem(37);
             
         }
 
         &.-small{
+            
             font-size: $small-font-size;
             padding: rem(14) rem(29);
             font-weight: 400;
@@ -69,7 +75,12 @@ const className = computed (() => ({
           padding:rem(8) rem(11);
           justify-content: center;
           gap: rem(27);
-          border-radius: rem(37);
+          // border-radius: rem(37);
+
+          &.-sizeText{
+            font-size: $regular-font-size;
+        
+          }
            
             // > * {
             //     padding:rem(0) rem(0);

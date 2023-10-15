@@ -6,12 +6,17 @@ export default {
   argTypes: {
     color:{
       control: 'select',
-      options: ['default', 'light gray']
+      options: ['default', 'light gray', 'white']
     },
     bold:{
       control: 'select',
       options: ['default', 'bold']
+    },
+    size: {
+      control: 'select',
+      options: ['default', 'small', 'medium']
     }
+
   }
 }
 
@@ -24,7 +29,7 @@ export const Desc = {
       setup(){
         return { args }
       },
-      template: `<MyDesc v-bind="args" >Mon titre</MyDesc>`
+      template: `<MyDesc v-bind="args" >Description</MyDesc>`
     }
   },
   args: {

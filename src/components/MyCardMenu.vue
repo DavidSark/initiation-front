@@ -49,7 +49,6 @@ defineProps({
   width: rem(258);
   height: rem(275);
   position: relative;
-  border: 1px solid black;
   &__image img{
     position: absolute;
     width: rem(350);
