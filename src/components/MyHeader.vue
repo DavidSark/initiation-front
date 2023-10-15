@@ -8,8 +8,8 @@ import MyIcon from './elements/MyIcon.vue';
             <img src="src/assets/logo.svg" alt="">
         </div>
         <div class="menu__item">
-            <a>Home</a>
-            <a>Menu</a>
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/recipes">Recipes</RouterLink>
             <a>Service</a>
             <a>Shop</a>
         </div>    
@@ -30,6 +30,7 @@ import MyIcon from './elements/MyIcon.vue';
 
 <style lang="scss" scoped>
 .menu{
+   
     background-color: $white;
     padding: 15px rem(110) rem(15) rem(110);
     position: sticky;
@@ -53,7 +54,17 @@ import MyIcon from './elements/MyIcon.vue';
         padding-right: 5%;
         flex-shrink: 0;
         flex:1;
-       
+        
+        > *{
+            text-decoration: none;
+            color: black;
+            padding-top: 1px;
+            transition: all .5s;
+        }
+        > *:hover{
+            border-bottom: 1px solid;
+          
+        }
     }
 
     &__search{

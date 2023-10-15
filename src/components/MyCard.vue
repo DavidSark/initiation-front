@@ -1,6 +1,7 @@
 <script setup>
 import MyButton from './elements/MyButton.vue';
 import MyIcon from './elements/MyIcon.vue';
+import MyTitle from './elements/MyTitle.vue';
 
 
 defineProps({
@@ -22,7 +23,7 @@ defineProps({
 
     <div class="card__content">
       <div class="card__content-flex">
-        <h2 size='small' >{{ title }}</h2>
+        <MyTitle el="h2" size='small' bold="bold" >{{ title }}</MyTitle>
         <div class="card__content-flex-note">
           <MyIcon name="star" color="nobg" stroke="orange"></MyIcon>
           <p>{{ note }}</p>
@@ -52,7 +53,7 @@ defineProps({
   padding: rem(0) rem(10) rem(40) rem(10);
  
   &-flex{
-  padding: 0 10px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
